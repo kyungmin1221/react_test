@@ -1,0 +1,148 @@
+.experience {
+  min-height: 100vh;
+  padding: 120px 24px 80px;
+}
+
+.experience-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 60px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: -40px;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(99, 102, 241, 0.15);
+  border: 2px solid #6366f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6366f1;
+}
+
+.timeline-content {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.timeline-period {
+  color: #6366f1;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.timeline-title {
+  color: #f3f4f6;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 8px 0 4px;
+}
+
+.timeline-org {
+  color: #6b7280;
+  font-size: 15px;
+  margin: 0 0 16px;
+}
+
+.timeline-desc {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timeline-desc li {
+  color: #9ca3af;
+  font-size: 14px;
+  line-height: 1.7;
+  padding-left: 16px;
+  position: relative;
+  margin-bottom: 6px;
+}
+
+.timeline-desc li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #6366f1;
+}
+
+.cert-section {
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.cert-title {
+  color: #f3f4f6;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 20px;
+}
+
+.cert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cert-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 16px 20px;
+}
+
+.cert-name {
+  color: #d1d5db;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.cert-date {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 32px;
+  }
+
+  .timeline-icon {
+    left: -32px;
+    width: 28px;
+    height: 28px;
+  }
+}
