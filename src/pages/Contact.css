@@ -108,6 +108,13 @@
   padding: 14px;
 }
 
+.form-error {
+  color: #f87171;
+  font-size: 14px;
+  margin-top: 8px;
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   .contact-grid {
     grid-template-columns: 1fr;

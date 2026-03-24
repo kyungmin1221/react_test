@@ -38,7 +38,7 @@ function Home() {
             <FiGithub size={22} />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/kminnnee/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"

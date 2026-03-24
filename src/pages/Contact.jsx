@@ -1,22 +1,28 @@
 import { useState } from 'react';
 import { FiMail, FiMapPin, FiGithub, FiSend } from 'react-icons/fi';
+import { sendContact } from '../api/contactApi';
 import './Contact.css';
 
 function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // TODO: 백엔드 API 연동 시 여기에 fetch/axios 호출 추가
-    console.log('Contact form submitted:', form);
-    setSubmitted(true);
-    setForm({ name: '', email: '', message: '' });
-    setTimeout(() => setSubmitted(false), 3000);
+    setError(false);
+    try {
+      await sendContact(form);
+      setSubmitted(true);
+      setForm({ name: '', email: '', message: '' });
+      setTimeout(() => setSubmitted(false), 3000);
+    } catch {
+      setError(true);
+    }
   };
 
   return (
@@ -33,7 +39,7 @@ function Contact() {
               <FiMail className="contact-icon" size={20} />
               <div>
                 <h3>Email</h3>
-                <p>kyungmin@example.com</p>
+                <p>fox9872@naver.com</p>
               </div>
             </div>
             <div className="contact-item">
@@ -67,7 +73,7 @@ function Contact() {
                 name="name"
                 value={form.name}
                 onChange={handleChange}
-                placeholder="홍길동"
+                placeholder="박경민"
                 required
               />
             </div>
@@ -100,6 +106,9 @@ function Contact() {
                 <>보내기 <FiSend size={16} /></>
               )}
             </button>
+            {error && (
+              <p className="form-error">전송에 실패했습니다. 다시 시도해주세요.</p>
+            )}
           </form>
         </div>
       </div>
