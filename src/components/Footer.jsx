@@ -1,7 +1,11 @@
-import { FiGithub, FiMail } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
+import { FiGithub, FiMail, FiSettings } from 'react-icons/fi';
+import { useAuth } from '../context/AuthContext';
 import './Footer.css';
 
 function Footer() {
+  const { isAdmin } = useAuth();
+
   return (
     <footer className="footer">
       <div className="footer-inner">
@@ -17,9 +21,17 @@ function Footer() {
           >
             <FiGithub size={20} />
           </a>
-          <a href="mailto:kyungmin@example.com" aria-label="Email">
+          <a href="mailto:fox9872@naver.com" aria-label="Email">
             <FiMail size={20} />
           </a>
+          <Link
+            to={isAdmin ? '/admin' : '/admin/login'}
+            className="admin-link"
+            aria-label="관리자"
+            title="관리자"
+          >
+            <FiSettings size={18} />
+          </Link>
         </div>
       </div>
     </footer>

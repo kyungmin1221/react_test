@@ -1,0 +1,264 @@
+.admin-dashboard {
+  min-height: 100vh;
+  padding: 120px 24px 80px;
+}
+
+.admin-dashboard-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.admin-header h1 {
+  color: #f3f4f6;
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0 0 4px;
+}
+
+.admin-subtitle {
+  color: #6b7280;
+  font-size: 15px;
+}
+
+.admin-header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Form overlay */
+.admin-form-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.admin-form-card {
+  background: #1a1b26;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 32px;
+  width: 100%;
+  max-width: 560px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.admin-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.admin-form-header h2 {
+  color: #f3f4f6;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.admin-form-card .form-group {
+  margin-bottom: 16px;
+}
+
+.admin-form-card label {
+  display: block;
+  color: #d1d5db;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.admin-form-card input,
+.admin-form-card textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #f3f4f6;
+  font-size: 15px;
+  font-family: inherit;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.admin-form-card input:focus,
+.admin-form-card textarea:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+
+.admin-form-card input::placeholder,
+.admin-form-card textarea::placeholder {
+  color: #4b5563;
+}
+
+.admin-form-card textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.form-submit-btn {
+  width: 100%;
+  justify-content: center;
+  font-size: 15px;
+  padding: 12px;
+  margin-top: 8px;
+}
+
+/* Project list */
+.admin-project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.admin-project-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  transition: border-color 0.2s;
+}
+
+.admin-project-item:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.admin-project-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.admin-project-info h3 {
+  color: #f3f4f6;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.admin-project-period {
+  color: #6366f1;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.admin-project-desc {
+  color: #9ca3af;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.admin-project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.admin-project-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.icon-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  color: #9ca3af;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn:hover {
+  color: #f3f4f6;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.icon-btn.edit:hover {
+  color: #6366f1;
+  border-color: rgba(99, 102, 241, 0.3);
+}
+
+.icon-btn.danger:hover {
+  color: #f87171;
+  border-color: rgba(248, 113, 113, 0.3);
+}
+
+.confirm-delete {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #f87171;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #6b7280;
+}
+
+.empty-state p {
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .admin-header {
+    flex-direction: column;
+  }
+
+  .admin-header h1 {
+    font-size: 28px;
+  }
+
+  .admin-project-item {
+    flex-direction: column;
+  }
+
+  .admin-project-actions {
+    flex-direction: row;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
